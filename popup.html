@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <img class="logo" src="img/glitter--horizontal.svg" />
+      <!-- <div style="visibility: hidden; height: 0px; padding: 0; margin: 0;" id="toggle-items" class="toggle-items">
+        <div id="toggle__theme" class="toggle active">Themes</div>
+        <div id="toggle__custom" class="toggle">Edit Theme</div>
+        <div id="toggle__indicator" class="indicator"></div>
+      </div> -->
+      <div class="flex">
+        <input id="title" value="Themes" />
+        <span>Theme name</span>
+        <div class="btn outlined" id="new">+ New</div>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <div class="theme container">
+        <div id="presets-wrapper">
+
+        </div>
+      </div>
+      <div class="custom container">
+        <!-- <div class="new-flex">
+          <a id="import">Import theme</a>
+        </div> -->
+        <div class="collapse" id='color'>
+          <h3 class='collapse__title color__title'>
+            <span>Color</span>
+            <span>+</span>
+          </h3>
+          <div class='collapse__content color__content'>
+            <div>
+              <div class="option flex">
+                Primary color
+                <input type="color" id="primarycolor">
+              </div>
+              <div class="option flex">
+                Background color
+                <input type="color" id="backgroundcolor">
+              </div>
+              <div class="option flex">
+                Hover color
+                <input type="color" id="hovercolor">
+              </div>
+              <div class="option flex">
+                Accent color
+                <input type="color" id="accentcolor">
+              </div>
+              <div class="option flex">
+                Border color
+                <input type="color" id="bordercolor">
+              </div>
+              <div class="option flex">
+                Text color
+                <input type="color" id="textcolor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id='card'>
+          <h3 class='collapse__title card__title'>
+            <span>Card Styles</span>
+            <span>+</span>
+          </h3>
+          <div class='collapse__content card__content'>
+            <div>
+              <div class="option flex">
+                Background color
+                <input type="color" id="cardbackground">
+              </div>
+              <div class="option flex">
+                Border color
+                <input type="color" id="cardbordercolor">
+              </div>
+              <div class="option flex">
+                Border width (1 - 10)
+                <input type="number" value="0" min="0" max="10" id="cardborderwidth">px
+              </div>
+              <div class="option">
+                Border radius
+                <select name="cardborderradius" id="cardborderradius" value="small">
+                  <option value="2px">Small (2px)</option>
+                  <option value="8px">Medium (8px)</option>
+                  <option value="16px">Large (16px)</option>
+                </select>
+              </div>
+              <!-- <div class="option flex">
+                Card shadow
+                <input type="text" id="cardshadow" placeholder="Enter value...">
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id='button'>
+          <h3 class='collapse__title button__title'>
+            <span>Button Styles</span>
+            <span>+</span>
+          </h3>
+          <div class='collapse__content button__content'>
+            <div>
+              <div class="option flex">
+                Text color
+                <input type="color" id="buttontextcolor">
+              </div>
+              <div class="option">
+                Border radius
+                <select name="buttonborderradius" id="buttonborderradius" value="6px">
+                  <option value="2px">Square</option>
+                  <option value="6px">Rounded</option>
+                  <option value="999px">Circle</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id='input'>
+          <h3 class='collapse__title input__title'>
+            <span>Input Styles</span>
+            <span>+</span>
+          </h3>
+          <div class='collapse__content input__content'>
+            <div>
+              <div class="option flex">
+                Background color
+                <input type="color" id="inputbackground">
+              </div>
+              <div class="option flex">
+                Text color
+                <input type="color" id="inputtextcolor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <!-- HOMEPAGE BUTTONS -->
+      <button id="refresh" class="btn">Refresh</button>
+      <button id="edit" class="btn outlined">Edit Theme</button>
+
+      <!-- EDIT THEME BUTTONS -->
+      <button id="save" class="btn">Save</button>
+
+      <!-- NEW THEME BUTTONS -->
+      <button id="create" class="btn">Create</button>
+      <button id="cancel" class="btn outlined">Cancel</button>
+    </div>
+
+    <script src="js/themes.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/loadThemes.js"></script>
+    <script src="js/collapse.js"></script>
+    <!-- 
+
+  --backgroundcolor: #f7f7f7;
+	--hovercolor: #fafafa;        
+	--card: #ffffff;         
+	--accentcolor: #e8e8e8;
+	--textcolor: #444444;         
+	--cardborderradius: 12px;    
+	--profileRadius: 24px;   
+	--cardborderradius: 12px;      
+	--inputRadius: 4px;
+	--inputBorder: #d8d8d8;
+	--inputBorderHover: #c8c8c8;
+	--inputbackground: #ffffff;
+	--cardshadow:  rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px; /* CONTROLS CARD BOX SHADOW */
+  --scrollbarBackground: #565f65;
+	--scrollbarColor: #aaaaaa; 
+  
+  -->
+  </body>
+
+</html>

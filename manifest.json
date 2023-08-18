@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Glitter",
+  "version": "1.0.2",
+  "description": "25+ customizable themes for Twitter. Add your own flair to Twitter with an easy-to-use theme editor.",
+  "short_name": "Glitter",
+  "icons": {
+    "16": "img/glitter.png",
+    "48": "img/glitter.png",
+    "128": "img/glitter.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["activeTab", "tabs", "cookies", "*://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "css": ["css/override.css"],
+      "js": ["js/twitter.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Customize Twitter",
+    "default_popup": "popup.html"
+  }
+}
