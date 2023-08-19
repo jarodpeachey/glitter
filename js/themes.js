@@ -381,7 +381,7 @@ const themes = [
     hovercolor: '#100301',
     accentcolor: '#121212',
     bordercolor: '#555555',
-    textcolor: '#ffffff',
+    textcolor: '#000000',
     cardbackground: '#000000',
     cardborderradius: '8px',
     cardbordercolor: '#ff3211',
