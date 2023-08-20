@@ -3,6 +3,14 @@
 **********************         UTILITIES      ******************************
 *************************************************************************************
 ************************************************************************************/
+/* VERIFIED BADGE */
+svg[aria-label="Verified account"] {
+  fill: var(--primarycolor) !important;
+}
+html > body.home > div div div.r-kemski {
+  position: absolute !important;
+  background-color: red !important;
+}
 /* TEXT COLOR */
 @media (prefers-color-scheme: dark) {
   .r-hkyrab {
@@ -138,6 +146,10 @@ article {
   background-color: var(--hovercolor) !important;
 }
 
+[role="tab"] > div:first-child > div:first-child > div:nth-child(2) {
+  background-color: var(--primarycolor) !important;
+}
+
 /* SCROLLBARS */
 *::-webkit-scrollbar {
   background: var(--scrollbarBackground) !important;
@@ -225,16 +237,60 @@ main > div:first-child > div:first-child > div:first-child {
 [data-testid="primaryColumn"] div:first-child > div:nth-child(2) {
   max-width: 9999px !important;
 }
-[data-testid="primaryColumn"] > div > div:nth-child(3) {
-  display: none !important;
+[data-testid="primaryColumn"]
+  > div
+  > div:nth-child(3)
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child,
+[data-testid="primaryColumn"]
+  > div
+  > div:nth-child(3)
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child,
+[data-testid="primaryColumn"]
+  > div
+  > div:nth-child(3)
+  > div:first-child
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2)
+  > div:nth-child(2) {
+  background-color: transparent !important;
 }
 
 /* TEXT COLOR FOR TWEET */
-[data-testid="primaryColumn"]
-  div:first-child
-  > div:nth-child(2)
-  > :nth-child(2)
-  span {
+[data-testid="tweet"] > div:first-child span {
   color: var(--textcolor) !important;
 }
 /* LEFT SIDEBAR FLEX WRAPPER */
@@ -427,7 +483,7 @@ nav[aria-label="Primary"] a svg {
 }
 
 [data-testid="attachments"] [aria-label="Add a choice"] {
-  margin-bottom: 12ypx !important;
+  margin-bottom: 12px !important;
 }
 
 /* [data-testid='attachments']
@@ -506,12 +562,16 @@ select ~ svg {
   > div:first-child
   > div:first-child
   > div:nth-child(9)
-  [role="button"] {
+  [role="button"],
+div[role="button"][data-testid="tweetButtonInline"],
+[data-testid="tweetButton"] {
   /* background-color: rgb(29, 161, 242) !important; */
   color: var(--buttontextcolor) !important;
   opacity: 1 !important;
   border-radius: var(--buttonborderradius) !important;
   color: var(--buttontextcolor) !important;
+  /* display: block !important; */
+  background-color: var(--primarycolor) !important;
 }
 [aria-labelledby="modal-header"]
   > div:first-child
@@ -595,6 +655,17 @@ a[href="/compose/tweet"] {
 }
 [role="button"][data-testid*="follow"]:hover * {
   color: var(--buttontextcolor) !important;
+}
+
+/* TWEET ADD BUTTONS */
+[data-testid="toolBar"] > div:first-child > div svg {
+  fill: var(--primarycolor) !important;
+}
+[data-testid="toolBar"] > div:first-child div[role="button"]:hover {
+  background: var(--hovercolor) !important;
+}
+[data-testid="toolBar"] > div:first-child div[role="button"]:hover > div {
+  background-color: transparent !important;
 }
 
 /******************************************************************
@@ -1303,7 +1374,8 @@ body.home
   border-radius: var(--cardborderradius) !important;
 }
 
-[role="progressbar"] + .r-kemksi, [role="progressbar"] + .r-kemksi > .r-kemski {
+[role="progressbar"] + .r-kemksi,
+[role="progressbar"] + .r-kemksi > .r-kemski {
   background-color: var(--cardbackground) !important;
 }
 
@@ -1326,7 +1398,8 @@ body.home
 }
 
 /* TWEET BOX CARD */
-body.home [data-testid="primaryColumn"] > div:first-child > div:nth-child(2) {
+body.home [data-testid="primaryColumn"] > div:first-child > div:nth-child(2),
+[data-testid="primaryColumn"] > div > div:nth-child(3) {
   position: relative;
   background-color: var(--cardbackground) !important;
   border-radius: var(--cardborderradius) !important;
@@ -1387,7 +1460,7 @@ body.home
 
 /* TWEET BOX TOOLBAR */
 body.home [data-testid="primaryColumn"] div[data-testid="toolBar"] {
-  background-color: transparent !important;
+  background-color: var(--cardbackground) !important;
 }
 
 body.home
@@ -1438,6 +1511,16 @@ body.home
   overflow: hidden;
 }
 
+[aria-label*="’s Photos"], [aria-label*="liked Tweets"] {
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0px !important;
+  margin: 0px !important;
+  box-shadow: none !important;
+}
+
 [aria-label*="Timeline: Notifications"],
 [aria-label*="Timeline: Messages"],
 [aria-label="Timeline: Bookmarks"],
@@ -1481,7 +1564,9 @@ body.home
 
 /* TWEET LINKS */
 body.home [aria-label*="Timeline"] article {
-  border: none !important;
+  border-color: transparent !important;
+  border-width: 0px !important;
+  box-shadow: none !important;
   padding: 0 !important;
   /* border-bottom: 1px solid var(--bordercolor) !important; */
   padding: 0px 16px !important;
@@ -1638,6 +1723,15 @@ body.home
   > div:first-child
   > div:first-child {
   border-radius: var(--buttonborderradius) !important;
+}
+body.home
+  [aria-label*="Timeline"]
+  article
+  [role="group"]
+  [dir="ltr"]:hover
+  > div:first-child
+  > div:first-child {
+  background-color: var(--cardbackground) !important;
 }
 
 /* TWEET COUNT */
